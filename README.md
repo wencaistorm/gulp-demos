@@ -142,9 +142,9 @@ gulp.task('default', ['connect', 'watch:html', 'watch:css']);
 ```
 此处稍微复杂一点：
 1. `connect.server()` 接收一个对象作为参数
-  + 默认端口号为 `8080`，被其他程序占用时可指定其他端口
-  + 当入口文件 index.html 不是位于根目录时，用于指定 index.html 的路径
-  + 开启自动刷新
+    + 默认端口号为 `8080`，被其他程序占用时可指定其他端口
+    + 当入口文件 index.html 不是位于根目录时，用于指定 index.html 的路径
+    + 开启自动刷新
 2. 自动刷新是通过 `websocket` 实现的，文件发生变化时，通过 `websocket` 通知浏览器刷新，但是如果只是 css 文件变化了，最理想的状态是只更新 css 文件即可，`css-reload` 和 `html-reload` 就是在做这样的事情。
 3. 指定监听的文件，当监听的文件发生变化时，执行 `connect.reload()`
 4. 组合任务，多个任务并行
@@ -153,7 +153,12 @@ gulp.task('default', ['connect', 'watch:html', 'watch:css']);
 
 
 
+## Useful links:
 
+这里仅仅给出了最常用最简单的功能，如需了解更多，以下内容可供参考：
 
-gulp-sass: https://www.npmjs.com/package/gulp-sass
-gulp-connect: https://www.npmjs.com/package/gulp-connect
++ gulp: https://www.gulpjs.com.cn/
+
++ gulp-sass: https://www.npmjs.com/package/gulp-sass
+
++ gulp-connect: https://www.npmjs.com/package/gulp-connect
