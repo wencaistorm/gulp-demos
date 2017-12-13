@@ -19,6 +19,28 @@
 
 + default
 
+## How to use
+
+环境：node 和 npm（可以使用 cnpm 代替）
+
+首先，全局安装 gulp
+```bash
+npm install -g gulp
+```
+
+然后，clone 代码到本地
+```bash
+git clone https://github.com/wencaistorm/gulp-demos.git
+```
+
+最后在 demo* 目录下安装依赖，查看效果
+例如：
+```bash
+cd demo01-sass
+npm install
+gulp sass
+```
+
 ## demo01: 编译 sass
 
 使用 gulp-sass 插件将 scss 文件编译成 css 文件
@@ -162,3 +184,5 @@ gulp.task('default', ['connect', 'watch:html', 'watch:css']);
 + gulp-sass: https://www.npmjs.com/package/gulp-sass
 
 + gulp-connect: https://www.npmjs.com/package/gulp-connect
+
+## 未完待续……
