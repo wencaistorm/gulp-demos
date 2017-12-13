@@ -86,7 +86,7 @@ npm install
 gulp
 ```
 
-## demo01: 编译 sass
+## demo01: 编译 sass ([source](https://github.com/wencaistorm/gulp-demos/tree/master/demo01-sass))
 
 使用 gulp-sass 插件将 scss 文件编译成 css 文件
 
@@ -112,7 +112,7 @@ gulp
 
 观察 css 目录，已经编译出了 2 个 css 文件。
 
-## demo02: 监听文件修改并自动编译 sass
+## demo02: 监听文件修改并自动编译 sass ([source](https://github.com/wencaistorm/gulp-demos/tree/master/demo02-sass-watch))
 
 为了避免每次修改 scss 文件后手动执行 gulp 任务，使用 gulp 的监听功能
 
@@ -147,7 +147,7 @@ color: lightgreen;
 
 观察命令行打印日志和 css 目录下的 style.css 文件内容，可以看到在修改 style.scss 文件之后，sass 编译任务自动执行。
 
-## demo03: 开启本地服务器并监听文件修改自动刷新
+## demo03: 开启本地服务器并监听文件修改自动刷新 ([source](https://github.com/wencaistorm/gulp-demos/tree/master/demo03-gulp-connect))
 
 例如：
 ```js
@@ -217,7 +217,73 @@ gulp.task('default', ['server', 'watch:html', 'watch:css']);
 3. 指定监听的文件，当监听的文件发生变化时，执行 `connect.reload()`
 4. 组合任务，多个任务并行
 
+## demo04: 省时的浏览器同步测试工具 ([source](https://github.com/wencaistorm/gulp-demos/tree/master/demo04-browser-sync))
 
+#### 一图胜千言：
+
+1. 实时、快速响应您的文件更改（html、js、css、sass、less等）并自动刷新页面：
+
+![](http://www.browsersync.cn/img/sync-demo.gif)
+
+2. 在一个浏览器中滚动页面、点击等行为也会同步到其他浏览器和设备中
+![](http://www.browsersync.cn/img/scroll-demo.gif)
+
+#### 使用
+
+```js
+// gulpfile.js
+var gulp = require('gulp');
+var browserSync = require('browser-sync').create();
+
+// 静态服务器
+gulp.task('browser-sync', function () {
+  browserSync.init({
+    port: 8080,  // 默认端口 3000
+    server: {
+      baseDir: "app",  // 静态服务器根目录
+    }
+  });
+});
+```
+命令行执行如下命令，browser-sync 会自动启动默认浏览器，并打开服务器指向的网址
+```bash
+cd demo04-browser-sync\
+cnpm install
+gulp server
+```
+
+不仅仅静态服务器：
+```js
+// 静态服务器 + 监听 scss/html 文件
+gulp.task('serve', function () {
+  browserSync.init({
+    port: 8080, // 默认端口 3000
+    server: {
+      baseDir: "app", // 静态服务器根目录
+    }
+  });
+
+  gulp.watch("app/scss/*.scss", ['sass']);
+  gulp
+    .watch("app/*.html")
+    .on('change', reload);
+});
+
+// scss编译后的 css将注入到浏览器里实现更新
+gulp.task('sass', function () {
+  return gulp
+    .src("app/scss/*.scss")
+    .pipe(sass())
+    .pipe(gulp.dest("app/css"))
+    .pipe(reload({stream: true}));
+});
+
+gulp.task('default', ['serve']);
+```
+
+命令行运行  `gulp` 命令，然后修改并保存 html 或者 scss 文件，可以看到浏览器会及时的刷新。
+
+另外在 http://localhost:3001 可以看到静态服务器和 browser-sync 的一些信息。
 
 
 ## Useful links:
@@ -229,5 +295,7 @@ gulp.task('default', ['server', 'watch:html', 'watch:css']);
 + gulp-sass: https://www.npmjs.com/package/gulp-sass
 
 + gulp-connect: https://www.npmjs.com/package/gulp-connect
+
++ Browsersync: http://www.browsersync.cn/
 
 ## 未完待续……
