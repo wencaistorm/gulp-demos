@@ -317,7 +317,7 @@ gulp.task('include', function () {
 ```bash
 cd demo05-gulp-replace\
 cnpm install
-gulp
+gulp include
 ```
 
 配合上个 demo 中的 browser-sync 插件，效果更好。
