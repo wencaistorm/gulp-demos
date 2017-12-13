@@ -4,7 +4,7 @@ var sass = require('gulp-sass');
 var reload = browserSync.reload;
 
 // 静态服务器 + 监听 scss/html 文件
-gulp.task('serve', ['sass'], function () {
+gulp.task('server', ['sass'], function () {
   browserSync.init({
     port: 8080, // 默认端口 3000
     server: {
@@ -27,4 +27,4 @@ gulp.task('sass', function () {
     .pipe(reload({stream: true}));
 });
 
-gulp.task('default', ['serve']);
+gulp.task('default', ['server']);
