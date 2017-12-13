@@ -74,18 +74,14 @@ gulp.task('sass', function () {
 })
 ```
 
-index.html
-```
-<link rel="stylesheet" href="./css/base.css">
-<link rel="stylesheet" href="./css/style.css">
-```
-
 命令行执行：
 ```bash
+cd demo01-sass\
+cnpm install
 gulp sass
 ```
 
-观察 css 目录，并使用浏览器打开 index.html
+观察 css 目录，已经编译出了 2 个 css 文件。
 
 ## demo02: 监听文件修改并自动编译 sass
 
@@ -110,15 +106,17 @@ gulp.task('sass:watch', function () {
 
 命令行执行：
 ```bash
+cd demo02-sass-watch\
+cnpm install
 gulp sass:watch
 ```
 
-然后修改 style.scss 文件，给 h1 增加一行样式：
+然后修改 style.scss 文件，比如给 h1 增加一行样式：
 ```css
 color: lightgreen;
 ```
 
-观察命令行打印日志和 css 目录下的 style.css 文件内容
+观察命令行打印日志和 css 目录下的 style.css 文件内容，可以看到在修改 style.scss 文件之后，sass 编译任务自动执行。
 
 ## demo03: 开启本地服务器并监听文件修改自动刷新
 
@@ -135,16 +133,18 @@ gulp.task('connect', function() {
 
 命令行执行：
 ```bash
+cd demo03-gulp-connect\
+cnpm install
 gulp connect
 ```
 
 浏览器打开 http://localhost:8080 或者 http://127.0.0.1:8080 ，浏览器默认打开目录下的 index.html ，如果不存在 index.html 则显示目录结构。
 
-当然如果只有一个本地服务器，意义并不是很大。我们实现的是监听文件变化并自动刷新浏览器。
+当然如果只有一个本地服务器，意义并不是很大。我们的目的是监听文件变化并自动刷新浏览器。
 
-例如：
+可以将 gulpfile.js 修改如下：
 ```js
-gulp.task('connect', function() {
+gulp.task('server', function() {
   connect.server({
     // 指定端口号
     port: 8888,
@@ -176,8 +176,9 @@ gulp.task('watch:css', function () {
   gulp.watch(['./app/**/*.css'], ['css-reload']);
 });
 
-gulp.task('default', ['connect', 'watch:html', 'watch:css']);
+gulp.task('default', ['server', 'watch:html', 'watch:css']);
 ```
+
 此处稍微复杂一点：
 1. `connect.server()` 接收一个对象作为参数
     + 默认端口号为 `8080`，被其他程序占用时可指定其他端口
@@ -186,7 +187,6 @@ gulp.task('default', ['connect', 'watch:html', 'watch:css']);
 2. 自动刷新是通过 `websocket` 实现的，文件发生变化时，通过 `websocket` 通知浏览器刷新，但是如果只是 css 文件变化了，最理想的状态是只更新 css 文件即可，`css-reload` 和 `html-reload` 就是在做这样的事情。
 3. 指定监听的文件，当监听的文件发生变化时，执行 `connect.reload()`
 4. 组合任务，多个任务并行
-
 
 
 

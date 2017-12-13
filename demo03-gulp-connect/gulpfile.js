@@ -1,7 +1,7 @@
 var gulp = require('gulp')
 var connect = require('gulp-connect')
 
-gulp.task('connect', function() {
+gulp.task('server', function() {
   connect.server({
     // 指定端口号
     port: 8888,
@@ -33,4 +33,4 @@ gulp.task('watch:css', function () {
   gulp.watch(['./app/**/*.css'], ['css-reload']);
 });
 
-gulp.task('default', ['connect', 'watch:html', 'watch:css']);
+gulp.task('default', ['server', 'watch:html', 'watch:css']);
