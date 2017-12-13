@@ -3,12 +3,29 @@
 
 ## Foreword: What is Gulp
 > 用自动化构建工具增强你的工作流程！
-+ gulp.task
 
-+ gulp.src
++ gulp.src()
 
-+ gulp.dest
+  接受一个参数用于指定要处理的源文件的匹配符路径，匹配符路径可以是字符串，也可以是数组，例如：
+  
+    - `'app/index.html'`: 匹配具体文件，app 目录下的 index.html
+    - `'scss/*.scss'`: 匹配 scss 目录下所有以 scss 为后缀的文件
+    - `'scripts/**/*.js'`: 匹配 scripts 目录下所有子目录下的 js 文件：
+    - `'!scss/base.scss'`: 排除 scss 目录下的 base.scss 文件
+    - `['scss/*.scss', 'scripts/*.js']`: 同时匹配 scss 目录下所有的 scss 文件和 scripts 目录下所有的 js 文件
 
++ gulp.dest()
+
+  接受一个参数用于指定处理完后文件输出的路径，例如：`./public'`
+
++ gulp.task() 创建一个任务
+
+  接受 3 个参数：
+  
+    - 任务名称（必填），字符串类型
+    - 任务依赖（可选），如果指定了依赖，会先执行依赖的任务，然后再执行本任务。如压缩 js 代码压缩前需要对 js 代码进行校验，则先执行校验任务，后执行压缩任务。
+    - 任务所进行的操作（必填）
+    
 + gulp.run
 
 + gulp.watch
