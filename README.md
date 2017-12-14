@@ -34,6 +34,7 @@ gulp
 1. demo04: [省时的浏览器同步测试工具](https://github.com/wencaistorm/gulp-demos/tree/master/demo04-browser-sync)
 1. demo05: [html 模块化](https://github.com/wencaistorm/gulp-demos/tree/master/demo05-gulp-replace)
 
+## 未完待续……
 ## Useful links:
 
 这里仅仅给出了最常用最简单的功能，如需了解更多，可参考文档：
@@ -43,4 +44,7 @@ gulp
 + gulp-connect: https://www.npmjs.com/package/gulp-connect
 + Browsersync: http://www.browsersync.cn/
 
-## 未完待续……
+## 福利
+
+1. Chrome 网上应用商店安装
+2. 离线安装：地址栏中打开 `chrome://extensions/` ，将 Octotree.crx 文件拖到这个页面中，即可完成安装。Octotree 插件下载地址：[百度网盘下载](https://pan.baidu.com/s/1i5IkhN3)
