@@ -3,7 +3,13 @@
 
 现在可以利用 gulp 实现自动化，模块化。
 
+`gulp-replace` 作用类似 JavaScript 的 `String.prototype.replace()` ，用于在文件中用一些字符串替换另一些字符串，或者替换一个与正则表达式匹配的字符串。
+
 利用fs模块来读取目标目录下的 html 文件，然后遍历各个文件，把文件中的占位符 `<!--header--><!--headerend-->` 和`<!--footer--><!--footerend-->` 分别替换为 _header.html 和 _footer.html 中的内容，最后再输出到原目录下。
+
+占位符可以自定义，只要在 index.html 中和 gulpfile.js 中保持一致即可。
+
+例如：
 
 ```js
 gulp.task('include', function () {
@@ -33,7 +39,7 @@ cnpm install
 gulp include
 ```
 
-配合上个 demo 中的 browser-sync 插件，效果更好。
+配合前面 demo 中的 browser-sync 插件，效果更好。
 
 ```bash
 gulp

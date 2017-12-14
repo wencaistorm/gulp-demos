@@ -46,5 +46,14 @@ gulp
 
 ## 福利
 
+这个东西是 Chrome 一个插件，叫做 Octotree ，效果是这个样子滴：
+
+![](https://raw.githubusercontent.com/buunguyen/octotree/master/docs/chrome-github.jpg)
+
+有了它，可以很方便的查看 repo 的目录结构，并且可以直接点击跳转，而不用在一个一个文件夹里找来找去了（我大天朝的 github 访问速度感人！）。
+
+安装方式有两种：
 1. Chrome 网上应用商店安装
 2. 离线安装：地址栏中打开 `chrome://extensions/` ，将 Octotree.crx 文件拖到这个页面中，即可完成安装。Octotree 插件下载地址：[百度网盘下载](https://pan.baidu.com/s/1i5IkhN3)
+
+最后有个小技巧，鼠标放在目录中某个文件上面，文件图标会变成下载图标，点击图标可以直接下载此文件。
