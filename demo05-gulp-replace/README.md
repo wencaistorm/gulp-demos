@@ -40,3 +40,5 @@ gulp
 ```
 
 其实不局限于 header 和 footer，只要是可以相同的功能都可以抽取出一个可以共用的 html 模块
+
+参考文章：[利用gulp解决前后端分离的header/footer引入问题](http://www.cnblogs.com/lvdabao/p/5322639.html)
