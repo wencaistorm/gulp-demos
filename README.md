@@ -2,7 +2,7 @@
 
 ## What is this
 
-使用 gulp 作为项目构建工具一年左右，期间遇到了很多的问题，查阅了很多文档。项目也接近尾声，2017 也即将结束，值此时机，将 gulp 的使用方法和项目的构建方式通过一个个 demo 展示出来，作为自己再 gulp 方面的一个总结。
+使用 gulp 作为项目构建工具一年左右，期间遇到了很多的问题，查阅了很多文档。项目也接近尾声，2017 也即将结束，值此时机，将 gulp 的使用方法和项目的构建方式通过一个个 demo 展示出来，作为自己在 gulp 方面的一个总结。
 
 ## demo list
 0. demo00: [gulp 基础概念](https://github.com/wencaistorm/gulp-demos/tree/master/demo00)
