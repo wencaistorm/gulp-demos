@@ -8,7 +8,7 @@
 0. demo00: [gulp 基础概念](https://github.com/wencaistorm/gulp-demos/tree/master/demo00)
 1. demo01: [编译 sass](https://github.com/wencaistorm/gulp-demos/tree/master/demo01-sass)
 1. demo02: [监听文件修改并自动编译 sass](https://github.com/wencaistorm/gulp-demos/tree/master/demo02-sass-watch)
-1. demo03: [开启本地服务器并监听文件修改自动刷新](https://github.com/wencaistorm/gulp-demos/tree/master/demo03-gulp-connect))
+1. demo03: [开启本地服务器并监听文件修改自动刷新](https://github.com/wencaistorm/gulp-demos/tree/master/demo03-gulp-connect)
 1. demo04: [省时的浏览器同步测试工具](https://github.com/wencaistorm/gulp-demos/tree/master/demo04-browser-sync)
 1. demo05: [html 模块化](https://github.com/wencaistorm/gulp-demos/tree/master/demo05-gulp-replace)
 
