@@ -4,6 +4,28 @@
 
 使用 gulp 作为项目构建工具一年左右，期间遇到了很多的问题，查阅了很多文档。项目也接近尾声，2017 也即将结束，值此时机，将 gulp 的使用方法和项目的构建方式通过一个个 demo 展示出来，作为自己在 gulp 方面的一个总结。
 
+## How to use
+
+环境：node 和 npm（可以使用 cnpm 代替）
+
+首先，全局安装 gulp
+```bash
+npm install -g gulp
+```
+
+然后，clone 代码到本地
+```bash
+git clone https://github.com/wencaistorm/gulp-demos.git
+```
+
+最后在 demo* 目录下安装依赖，查看效果
+例如：
+```bash
+cd demo01-sass
+npm install
+gulp
+```
+
 ## demo list
 0. demo00: [gulp 基础概念](https://github.com/wencaistorm/gulp-demos/tree/master/demo00)
 1. demo01: [编译 sass](https://github.com/wencaistorm/gulp-demos/tree/master/demo01-sass)
