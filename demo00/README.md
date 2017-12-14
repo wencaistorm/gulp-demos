@@ -65,25 +65,3 @@
   此任务可直接执行 `gulp` 命令来完成
 
 **如果上面的一些概念过于抽象，可以暂时把它们忘掉，通过下面简单例子的学习，也许你会更容易上手**
-
-## How to use
-
-环境：node 和 npm（可以使用 cnpm 代替）
-
-首先，全局安装 gulp
-```bash
-npm install -g gulp
-```
-
-然后，clone 代码到本地
-```bash
-git clone https://github.com/wencaistorm/gulp-demos.git
-```
-
-最后在 demo* 目录下安装依赖，查看效果
-例如：
-```bash
-cd demo01-sass
-npm install
-gulp
-```
