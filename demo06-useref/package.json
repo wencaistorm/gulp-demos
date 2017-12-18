@@ -1,0 +1,14 @@
+{
+  "name": "demo06-useref",
+  "version": "1.0.0",
+  "description": "经常我们会需要引入一些第三方插件，如 bootstrap 、jquery 、underscore 等等。",
+  "main": "gulpfile.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
