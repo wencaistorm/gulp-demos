@@ -1,0 +1,19 @@
+body, h1, h2 {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  color: lightcoral;
+}
+
+h2 {
+  color: lightgreen;
+}
+h1, h2, p, img {
+  text-align: center;
+}
+img {
+  display: block;
+  margin: 0 auto;
+}

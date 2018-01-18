@@ -50,7 +50,7 @@ gulp
 
 ![](https://raw.githubusercontent.com/buunguyen/octotree/master/docs/chrome-github.jpg)
 
-有了它，可以很方便的查看 repo 的目录结构，并且可以直接点击跳转，而不用在一个一个文件夹里找来找去了（我大天朝的 github 访问速度感人！）。
+有了它，可以很方便的查看 repo 的目录结构，并且可以直接点击跳转，而不用在一个一个文件夹里找来找去了（我大天朝的github访问速度很感人啊！）。
 
 安装方式有两种：
 1. Chrome 网上应用商店安装
